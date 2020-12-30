@@ -5,9 +5,9 @@ import { ListItem, Avatar  } from 'react-native-elements';
 function Menu(props) {
 
     const renderMenuItem = ({item, index}) => {
-
+      console.log(props);
         return (
-            <ListItem >
+            <ListItem onPress={() => props.onPress(item.id)}>
              <Avatar source={require('./images/uthappizza.png')} />
             <ListItem.Content>
               <ListItem.Title>{item.name}</ListItem.Title>
